@@ -14,3 +14,9 @@ reads in a monochrome BMP font file to generate a bitmap file
 - 8 bytes per glyph
 - 1st byte is top row... 8th byte is bottom row
 - most significant bit is left-most pixel... least significant bit is right-most pixel
+
+### Notes
+- Though 1-bit BMP stores already pixels as bitmaps, the bytes are arranged in the wrong order...
+- Technically we could simply have an image that is 8x2048px... However, that would be inconvinient to edit.
+- So opting to keep things simple (and simply rearrange bytes around)... A lot of constraints are assumed.
+- Mainly trying to get a balance between using existing tools and minimizing complexity.
